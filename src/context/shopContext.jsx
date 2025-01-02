@@ -8,7 +8,7 @@ import {environment} from "../environment.jsx"
 // Create the context
 export const ShopContext = createContext();
 
-const BASE_URL = `${environment.BASE_URL}}/api`;
+const BASE_URL = `${environment.API_URL}/api`;
 
 // ShopContextProvider Component
 const ShopContextProvider = ({ children }) => {
@@ -22,6 +22,7 @@ const ShopContextProvider = ({ children }) => {
 
 
   const getProducts = async () => {
+    debugger
   try {
       const response = await axios.get(`${BASE_URL}/product/list`);
       if(response.data.success){
