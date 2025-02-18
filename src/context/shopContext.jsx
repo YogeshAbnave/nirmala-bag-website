@@ -22,7 +22,6 @@ const ShopContextProvider = ({ children }) => {
 
 
   const getProducts = async () => {
-    debugger
   try {
       const response = await axios.get(`${BASE_URL}/product/list`);
       if(response.data.success){
